@@ -10,7 +10,9 @@
     --color-gray: #BABABA;
     --color-white: #FFFFFF;
 }
-
+.display-none {
+    display: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@ body {
     background: var(--color-gradient);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -42,12 +44,37 @@ header > h1 {
 #menu-icon {
     color: var(--color-gray);
     font-size: 4rem;
-    line-height: 0;
+
+    cursor: pointer;
+    padding: .5rem;
 }
 
-header nav {
-    display: none;
+#container-menu-icon{
+    border-radius: 999rem;
+    transition: background-color .3s;
 }
+#container-menu-icon:active {
+    background-color: var(--color-red);
+    transition: background-color .05s;
+}
+
+/* nav {
+    display: none;
+} */
+
+#aside-nav {
+    background-color: var(--color-dark-purple);
+    margin-top: 5rem;
+    color: var(--color-white);
+    position: relative;
+}
+#aside-nav ul {
+    list-style: none;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+}
+
 header nav ul {
     color: var(--color-gray);
     list-style: none;
@@ -106,12 +133,23 @@ main p {
     width: 40rem;
 }
 
+/* MIDIA MOBILE */
+@media screen and (max-width: 768px){
+    header {
+        margin-bottom: 0;
+    }
+    #nav-main{
+        display: none;
+    }
+}
+
+
 /* MIDIA DE TABLETS */
 @media screen and (min-width: 768px) {
     header {
         background: var(--color-alpha-dark-purple);
         margin: 3rem auto;
-        width: 700px;
+        width: 680px;
         height: 5rem;
         border-radius: 1.5rem;
     }
@@ -132,6 +170,9 @@ main p {
 
 /* MIDIA DE DESKTOP */
 @media screen and (min-width: 960px){
+    body {
+        height: 100vh;
+    }
     header {
         width: 80rem;
     }
@@ -140,6 +181,7 @@ main p {
         justify-content: space-between;
         /* border: 1px solid red; */
         width: 80rem;
+        margin: auto;
         padding: 0;
     }
     #title-section {

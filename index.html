@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artesanal Burger</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>igordão</h1>
-        <span>
+        <span onclick="openMenu()" id="container-menu-icon">
             <ion-icon id="menu-icon" name="menu-outline"></ion-icon>
         </span>
-        <nav>
+        <nav id="nav-main">
             <ul>
                 <li><p>home</p></li>
                 <li><p>sobre</p></li>
@@ -21,6 +22,14 @@
             </ul>
         </nav>
     </header>
+    <nav id="aside-nav">
+        <ul>
+            <li><p>home</p></li>
+            <li><p>sobre</p></li>
+            <li><p>cardápio</p></li>
+            <li><p>contato</p></li>
+        </ul>
+    </nav>
     <main>
         <section id="title-section">
             <h1>Igordão</h1>
