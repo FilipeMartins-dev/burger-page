@@ -75,7 +75,8 @@ header > h1 {
 #aside-nav {
     /* background-color: var(--color-dark-purple); */
     color: var(--color-white);
-    position: relative;
+    position: absolute;
+    width: 100%;
 }
 #aside-nav ul {
     list-style: none;
@@ -100,13 +101,17 @@ header > h1 {
 }
 
 #aside-nav ul li p {
-    width: 96%;
+    width: 95%;
     border-bottom: 1px solid;
     border-bottom-color: var(--color-red);
 }
 #aside-nav ul li:hover {
-    background-color: var(--color-alpha-dark-purple);
+    background-color: var(--color-red);
 }
+#aside-nav li:hover > p {
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-white);
+} 
 
 header nav ul {
     color: var(--color-gray);
@@ -182,8 +187,13 @@ main p:hover {
     width: 40rem;
 }
 
+
+
 /* MIDIA MOBILE */
 @media screen and (max-width: 768px){
+    body {
+        height: 100%;
+    }
     header {
         margin-bottom: 0;
         transition: background-color .2s;
