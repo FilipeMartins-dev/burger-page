@@ -93,6 +93,8 @@ header > h1 {
     align-items: center;
     justify-content: end;
     background-color: var(--color-dark-purple);
+    transition: background-color .2s;
+    cursor: pointer;
 }
 #aside-nav ul li:hover {
     background-color: var(--color-alpha-dark-purple);
