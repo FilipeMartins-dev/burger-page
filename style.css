@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Blogh;
+    src: url(fonts/Blogh.otf);
+}
+
 body {
     background: var(--color-gradient);
     background-size: cover;
@@ -70,12 +75,17 @@ header > h1 {
     transition: background-color .05s;
 }
 
+main h1 {
+    font-family: Blogh, Arial, Helvetica, sans-serif;
+    transition: color .3s;
+}
+
 /* nav {
     display: none;
 } */
-#nav-main ul{
-    /* gap: 0; */
-}
+/* #nav-main ul{
+    gap: 0;
+} */
 #nav-main ul li{
     padding: 1rem;
     border-radius: 1rem;
@@ -168,7 +178,7 @@ main p {
     margin: auto;
     margin-bottom: 5rem;
     width: 80%;
-    transition: color .2s;
+    transition: color .5s;
 }
 main p:hover {
     color: var(--color-white);
@@ -189,7 +199,7 @@ main p:hover {
     font-variant: small-caps;
 
     margin-bottom: 5rem;
-    transition: background-color .2s;
+    transition: background-color .3s;
 }
 #main-contact-button:hover {
     background-color: var(--color-purple);
@@ -281,10 +291,22 @@ main p:hover {
         transition: background-color .2s;
     }
     header:hover {
-        background-color: var(--color-alpha-dark-purple);
+        background-color: var(--color-red);
+    }
+    header:hover h1 {
+        color: var(--color-white);
+    }
+    header:hover #menu-icon {
+        color: var(--color-white);
+    }
+    main h1{
+        transition: color .3s;
     }
     #nav-main{
         display: none;
+    }
+    #aside-section {
+        margin-top: 1rem;
     }
 }
 
@@ -348,6 +370,16 @@ main p:hover {
     }
     main h1 {
         margin-top: 5rem;
+        border: 5px solid var(--color-purple);
+        display: inline-block;
+        line-height: 10rem;
+        border-radius: 10rem 50rem;
+        transition: border-color .3s, color .5s;
+        margin-bottom: 3rem;
+    }
+    main h1:hover {
+        border-color: var(--color-red);
+        color: var(--color-gray);
     }
     main p{
         text-align: left;
