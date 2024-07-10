@@ -71,6 +71,20 @@ header > h1 {
 /* nav {
     display: none;
 } */
+#nav-main ul{
+    /* gap: 0; */
+}
+#nav-main ul li{
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: background-color .5s, color .2s;
+}
+
+#nav-main ul li:hover {
+    background-color: var(--color-dark-purple);
+    cursor: pointer;
+    color: var(--color-red);
+}
 
 #aside-nav {
     /* background-color: var(--color-dark-purple); */
