@@ -3,6 +3,8 @@
 :root {
     font-size: 10px;
     --color-red: #CC6868;
+    --color-red-alpha: rgb(204, 104, 104, .1);
+    --color-red-alpha-two:rgb(204, 104, 104, .15);
     --color-purple: #7C4B83;
     --color-dark-purple: #1B1B2B;
     --color-alpha-dark-purple: #1b1b2b68;
@@ -203,6 +205,71 @@ main p:hover {
 }
 
 
+#aside-section {
+    text-align: center;
+    margin-top: 12rem;
+}
+#arrow-icon {
+    font-size: 5rem;
+    color: var(--color-red);
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+#aside-section h1 {
+    font-size: 3rem;
+    color: var(--color-red);
+    letter-spacing: .2rem;
+    font-variant: small-caps;
+    margin-bottom: 4rem;
+    text-shadow: 2px 2px 24px rgba(0, 0, 0, .2);
+    display: inline-block;
+    padding: 1rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    border: 3px solid;
+    border-color: var(--color-red);
+    box-shadow: 0 0 24px 12px var(--color-red-alpha);
+    transition: box-shadow .3s;
+}
+#aside-section h1:hover {
+    cursor: default;
+    box-shadow: 0 0 24px 12px var(--color-red-alpha-two);
+}
+#aside-section p {
+    font-size: 1.6rem;
+    color: var(--color-gray);
+    width: 80%;
+    line-height: 3rem;
+    margin: auto;
+    transition: color .5s;
+    cursor: default;
+}
+#aside-section p:hover{
+    color: var(--color-white);
+}
+#aside-section p:nth-of-type(2){
+    margin-bottom: 20rem;
+}
+@keyframes arrow {
+    0% {
+        /* padding-top: 0; */
+        top: 0;
+    }
+    50% {
+        /* padding-top: 1.5rem; */
+        top: 2rem;
+    }
+    100% {
+        /* padding-top: 0; */
+        top: 0;
+    }
+}
 
 /* MIDIA MOBILE */
 @media screen and (max-width: 768px){
@@ -244,14 +311,16 @@ main p:hover {
     main p {
         width: 50rem;
     }
+    #aside-section p {
+        width: 50rem;
+    }
 }
 
 /* MIDIA DE DESKTOP */
 @media screen and (min-width: 960px){
     body {
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+        height: 100%;
+        width: 100%;
     }
     header {
         width: 85rem;
@@ -288,5 +357,8 @@ main p:hover {
     }
     #main-contact-button {
         margin: 0;
+    }
+    #aside-section p{
+        width: 60rem;
     }
 }
